@@ -1,0 +1,15 @@
+学习OpenCV3
+Learning OpenCV 3: Computer Vision in C++ with the OpenCV Library
+示例代码
+
+# windows: msys2下通过pacman -Ss opencv搜索opencv库, 并通过pacman -S 安装
+
+# ubuntu上源码编译opencv 4
+$ sudo apt-get update
+$ sudo apt-get install -y --no-install-recommends build-essential cmake libavcodec-dev libavformat-dev libgtk2.0-dev libgtkglext1 libgtkglext1-dev libjpeg-dev  libpng-dev libswscale-dev libtbb2 libtbb-dev libtiff-dev pkg-config unzip wget
+$ git clone https://github.com/opencv/opencv.git
+$ cd opencv
+$ mkdir build
+$ cd build
+$ cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=~/local ..
+$ cmake --build . --target install -- -j 3
