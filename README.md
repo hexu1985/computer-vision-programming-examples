@@ -2,6 +2,7 @@
 
 - [学习OpenCV3](Learning.OpenCV)
 - [OpenCV算法精解](OpenCV.Algorithmic.Solution)
+- [OpenCV实例精解](OpenCV.By.Example)
 - [Python计算机视觉编程](Programming.Computer.Vision.With.Python)
 - [Python OpenCV从入门到实践](Python.OpenCV.From.Novice.To.Practice)
 
