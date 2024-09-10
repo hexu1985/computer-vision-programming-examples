@@ -79,7 +79,7 @@ int main( int argc, const char** argv )
 			cout << "\nm2\n" << m2 << endl;
 			
 			cout << "\nm1.*2\n" << m1*2 << endl;
-			cout << "\n(m1+2).*(m1+3)\n" << (m1+1).mul(m1+3) << endl;
+			cout << "\n(m1+1).*(m1+3)\n" << (m1+1).mul(m1+3) << endl;
 			cout << "\nm1*m2\n" << m1*m2 << endl;
 			cout << "\nt(m2)\n" << m2.t() << endl;
 			cout << "\ninv(m0)\n" << m0.inv() << endl;
