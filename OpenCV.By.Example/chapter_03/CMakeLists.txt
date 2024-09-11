@@ -4,8 +4,13 @@ cmake_policy(SET CMP0012 NEW)
 
 PROJECT(Photo_Tool)
 
+set(CMAKE_BUILD_TYPE RelWithDebInfo)
+
 # Requires OpenCV
 FIND_PACKAGE( OpenCV REQUIRED )
+
+# Requires OpenGL
+find_package(OpenGL REQUIRED)
 
 
 ADD_EXECUTABLE( ${PROJECT_NAME} main.cpp )
@@ -24,7 +29,7 @@ ADD_EXECUTABLE( ch3_sample4 sample4.cpp )
 TARGET_LINK_LIBRARIES( ch3_sample4 ${OpenCV_LIBS} )
 
 ADD_EXECUTABLE( ch3_sample5 sample5.cpp )
-TARGET_LINK_LIBRARIES( ch3_sample5 ${OpenCV_LIBS} )
+TARGET_LINK_LIBRARIES( ch3_sample5 ${OpenCV_LIBS} OpenGL::GL)
 
 ADD_EXECUTABLE( ch3_sample6 sample6.cpp )
 TARGET_LINK_LIBRARIES( ch3_sample6 ${OpenCV_LIBS} )

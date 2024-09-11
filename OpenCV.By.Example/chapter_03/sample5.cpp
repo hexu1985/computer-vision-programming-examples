@@ -64,7 +64,7 @@ int main( int argc, const char** argv )
     namedWindow("OpenGL Camera", WINDOW_OPENGL);
     
     // Enable texture
-    glEnable( GL_TEXTURE_2D );  
+    glEnable( GL_TEXTURE_2D );
     glGenTextures(1, &texture);
     
     setOpenGlDrawCallback("OpenGL Camera", on_opengl);
