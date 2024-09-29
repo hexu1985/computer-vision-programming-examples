@@ -262,7 +262,7 @@ void trainAndTest()
   Mat testResponses(testResponsesData.size(), 1, CV_32FC1, &testResponsesData[0]);
   
   // Set up SVM's parameters
-  Ptr<SVM> svm = SVM::create();
+  svm = SVM::create();
   svm->setType(SVM::C_SVC);
   svm->setKernel(SVM::CHI2);
   svm->setTermCriteria(TermCriteria(TermCriteria::MAX_ITER, 100, 1e-6));
