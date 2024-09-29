@@ -213,6 +213,7 @@ bool readFolderAndExtractFeatures(string folder, int label, int num_for_test,
   Mat frame;
   int img_index=0;
   while( images.read(frame) ){
+    cvtColor(frame, frame, COLOR_BGR2GRAY);
     //// Preprocess image
     Mat pre= preprocessImage(frame);
     // Extract features
