@@ -261,13 +261,13 @@ void trainAndTest()
   Mat testResponses(testResponsesData.size(), 1, CV_32FC1, &testResponsesData[0]);
   
   // Set up SVM's parameters
-  SVM::Params params;
-  params.svmType    = SVM::C_SVC;
-  params.kernelType = SVM::CHI2;
-  params.termCrit   = TermCriteria(TermCriteria::MAX_ITER, 100, 1e-6);
+  Ptr<SVM> svm = SVM::create();
+  svm->setType(SVM::C_SVC);
+  svm->setKernel(SVM::CHI2);
+  svm->setTermCriteria(TermCriteria(TermCriteria::MAX_ITER, 100, 1e-6));
   
   // Train the SVM
-  svm = StatModel::train<SVM>(trainingDataMat, ROW_SAMPLE, responses, params);
+  svm->train(trainingDataMat, ROW_SAMPLE, responses);
 
   if(testResponsesData.size()>0){
     cout << "Evaluation" << endl;
