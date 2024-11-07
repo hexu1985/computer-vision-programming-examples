@@ -88,7 +88,7 @@ int main() {
 	cv::waitKey(0); // wait for a key pressed
 
 	// read the image in gray scale
-	image1=  cv::imread("puppy.bmp", CV_LOAD_IMAGE_GRAYSCALE); 
+	image1=  cv::imread("puppy.bmp", cv::IMREAD_GRAYSCALE); 
 
 	// convert the image into a floating point image [0,1]
 	image1.convertTo(image2,CV_32F,1/255.0,0.0);
