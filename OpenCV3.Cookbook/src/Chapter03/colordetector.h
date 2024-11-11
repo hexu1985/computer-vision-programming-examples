@@ -22,6 +22,10 @@ Copyright (C) 2016 Robert Laganiere, www.laganiere.name
 #include <opencv2/core/core.hpp>
 #include <opencv2/imgproc/imgproc.hpp>
 
+#ifndef CV_BGR2Lab
+#define CV_BGR2Lab cv::COLOR_BGR2Lab
+#endif
+
 class ColorDetector {
 
   private:

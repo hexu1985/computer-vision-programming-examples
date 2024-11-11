@@ -21,6 +21,14 @@ Copyright (C) 2016 Robert Laganiere, www.laganiere.name
 
 #include "colordetector.h"
 
+#ifndef CV_BGR2Lab
+#define CV_BGR2Lab cv::COLOR_BGR2Lab
+#endif
+
+#ifndef CV_Lab2BGR
+#define CV_Lab2BGR cv::COLOR_Lab2BGR
+#endif
+
 int main()
 {
     // 1. Create image processor object

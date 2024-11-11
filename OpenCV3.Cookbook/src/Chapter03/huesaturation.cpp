@@ -23,6 +23,18 @@ Copyright (C) 2016 Robert Laganiere, www.laganiere.name
 #include <iostream>
 #include <vector>
 
+#ifndef CV_BGR2HSV
+#define CV_BGR2HSV cv::COLOR_BGR2HSV
+#endif
+
+#ifndef CV_HSV2BGR
+#define CV_HSV2BGR cv::COLOR_HSV2BGR
+#endif
+
+#ifndef CV_Lab2BGR
+#define CV_Lab2BGR cv::COLOR_Lab2BGR
+#endif
+
 void detectHScolor(const cv::Mat& image,		// input image 
 	double minHue, double maxHue,	// Hue interval 
 	double minSat, double maxSat,	// saturation interval
